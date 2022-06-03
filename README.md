@@ -1,83 +1,34 @@
-# Cantor Keyboard
-The Cantor keyboard is a 42 key diodeless split keyboard, designed with simplicity in mind. It is inspired on the popular [corne](https://github.com/foostan/crkbd), [ferris](https://github.com/pierrechevalier83/ferris) and [sweep](https://github.com/davidphilipbarr/Sweep) keyboards, aiming to provide a more ergonomic (stronger column stagger) corne-like layout with a simple, easy to assemble and cheap design.
+# Cantor Keyboard Remix (36 keys)
+This is a modified version of the [Cantor](https://github.com/diepala/cantor) keyboard, designed by [diepala](https://github.com/diepala).
 
-![Cantor Keyboard](assets/cantor_keyboard.jpg)
+![Cantor Keyboard](assets/cantor-remix.jpg)
 
-The keyboard uses choc switches with choc spacing. Therefore, only MBK keycaps can be used.
 
-### Why diodeless?
+## Changes
+This version has only 2 changes over the original:
+- 36 Keys: removed the outer column while keeping the original schematic
+- Custom Silkscreen: removed details from the silkscreen layer and added a geometric pattern (I tried to camouflage the Blackpills a bit)
 
-A diodeless design reduces the keyboard assembly time, as the amount of components to solder is significantly reduced.
-Moreover, soldering diodes can cause trouble during the keyboard build. Diodes need to be placed in the correct direction, if not, the keys won't work well!
-Eliminating diodes will prevent many errors during the assembly process.
+I followed the process documented on [this Ben Vallack's video](https://www.youtube.com/watch?v=JqpBKuEVinw) - it was quite simple. You can do the same if you want to change the silkscreen. 
 
-## Disclaimers
 
-All the designs and files are provided "AS IS" without any warranty or support.
+## Firmware / Keymap
+The 36 keys of this version are ideal for running [Miryoku](https://github.com/manna-harbour/miryoku), an ergonomic, minimal, orthogonal, and universal keyboard layout.
 
-## Design philosophy
+The original Cantor is already supported, so all you have to do is running the following command:
+```
+qmk flash -kb cantor -km manna-harbour_miryoku
+```
 
-The Cantor is designed with the following goals:
+Please note that as of 06/2022, an update for Miryoku is [pending review](https://github.com/qmk/qmk_firmware/pull/16482) - if you want to have the latest version you can merge the PR branch locally, or follow instructions discussed [here](https://github.com/manna-harbour/miryoku/discussions/89).
 
-- Comfort
-- Powerful
-- Low cost
-- Simplicity
-- Ease of build
-- USB-C
-- No diodes
 
-The PCB is reversible to reduce manufacturing costs.
+## Build Guide
+Grab the `pcb/gerber.zip` and use your service of choice to order it! I used [JLCPCB](https://jlcpcb.com/), and there's a tag for them to print the order number in the silkscreen layer. 
 
-## Getting started
+Make sure to follow the original [Cantor Build Guide](https://github.com/diepala/cantor/blob/main/doc/build_guide.md). 
 
-Would you like to build this keyboard? Then continue reading!
+## Support Cantor
+Consider supporting the original [Cantor](https://github.com/diepala/cantor)! Please refer to the original repository for more information.
 
-### Bill of Materials
 
-To build the keyboard, you will need the following materials:
-
-- 2x PCB boards (both are equal since they are reversible)
-- 2x STM32F401CC blackpill microcontrollers (they are cheap on aliexpress)
-- Pins and sockets for the microcontrollers (blackpill needs 20 pin stripes)
-- 42 Choc v1 switches
-- 42 MBK keycaps
-- Some little rubber feet/bumpers (recommended 6 mm of diameter)
-- 2x TRRS jacks (PJ-320A)
-- 1x TRRS cable
-- 1x USB cable compatible with your computer and the blackpill
-
-### Order the PCB
-
-Download the gerber file from realeses, and submit it to your favorite PCB manufacturer. The keyboard designs have been tested with JLCPCB.
-
-Note: if you don't want a random tracking number to be printed in the PCB, make sure to select the option 'Remove Order Number' in JLCPCB.
-
-### How to Build
-
-To build the keyboard, you'll also need a soldering iron and some tin. Follow the [build guide](doc/build_guide.md).
-
-### Firmware
-
-The Cantor keyboard uses the QMK firmware. Firmware for this keyboard is coming soon to the main QMK repository with [this PR](https://github.com/qmk/qmk_firmware/pull/16552).
-
-To flash the firmware to the microcontroller connect the blackpill to your computer and set it to bootloader mode. To do this the first time:
-
-1. Press and hold the BOOT0 button.
-2. Press and release the NRST button.
-3. Release the BOOT0 button.
-
-The following times you want to flash the keyboard, it is much simpler thanks to bootmagic. Hold the top left key of the keyboard and plug the microcontroller. If flashing the right part, hold the top right key.
-
-## Feedback
-
-If you have build this keyboard, please fill [this form](https://forms.gle/nfJCsei5hyHbjaHn9) to provide feedback. This will help to improve the keyboard design in future revisions.
-
-Also, you can open an issue reporting any problem or feature request.
-
-## Support
-
-The development of a keyboard takes time and money. If you like this keyboard a want to support me for the work and to develop future revisions of the keyboard, consider donating:
-
-PayPal: [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/donate/?hosted_button_id=ZKKE68MCBQ9P6)
-GitHub: [Here](https://github.com/sponsors/diepala)
