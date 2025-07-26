@@ -1,13 +1,11 @@
 # Cantor Keyboard Remix (36 keys)
 This is a modified version of the [Cantor](https://github.com/diepala/cantor) keyboard, designed by [diepala](https://github.com/diepala).
-
+This was later changed by [nilokr](https://github.com/nilokr) in the [Cantor-remix](https://github.com/nilokr/cantor-remix)
 ![Cantor Keyboard](assets/cantor-remix.jpg)
 
 
 ## Changes
-This version has only 2 changes over the original:
-- 36 Keys: removed the outer column while keeping the original schematic
-- Custom Silkscreen: removed details from the silkscreen layer and added a geometric pattern (I tried to camouflage the Blackpills a bit)
+I changed the silkscreen to one I liked better.
 
 I followed the process documented on [this Ben Vallack's video](https://www.youtube.com/watch?v=JqpBKuEVinw) - it was quite simple. You can do the same if you want to change the silkscreen. 
 
